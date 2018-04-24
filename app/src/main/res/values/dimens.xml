@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+
+    <dimen name="margin_padding_small">4dp</dimen>
+    <dimen name="margin_padding">8dp</dimen>
+    <dimen name="margin_padding_large">16dp</dimen>
+
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="photo_post_image_size">120dp</dimen>
+
+</resources>

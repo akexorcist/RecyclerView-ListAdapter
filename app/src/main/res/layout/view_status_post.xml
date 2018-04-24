@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_padding"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_padding_large">
+
+            <TextView
+                android:id="@+id/tvText"
+                style="@style/TextView.Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Hello everybody, This is message for preview only" />
+
+            <TextView
+                android:id="@+id/tvTimestamp"
+                style="@style/TextView.SubContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_large"
+                android:gravity="end"
+                tools:text="02/01/2018 11:51" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>
