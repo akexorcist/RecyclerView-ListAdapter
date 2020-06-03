@@ -1,8 +1,8 @@
 package com.akexorcist.listadapter
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.akexorcist.listadapter.adapter.ContentAdapter
 import com.akexorcist.listadapter.model.PostGenerator
 import kotlinx.android.synthetic.main.activity_main.*

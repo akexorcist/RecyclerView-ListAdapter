@@ -1,9 +1,9 @@
 package com.akexorcist.listadapter.adapter
 
-import android.support.v7.recyclerview.extensions.ListAdapter
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.akexorcist.listadapter.R
 import com.akexorcist.listadapter.constant.PostType
 import com.akexorcist.listadapter.model.PhotoPost

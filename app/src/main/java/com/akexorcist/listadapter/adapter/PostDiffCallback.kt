@@ -1,6 +1,6 @@
 package com.akexorcist.listadapter.adapter
 
-import android.support.v7.util.DiffUtil
+import androidx.recyclerview.widget.DiffUtil
 import com.akexorcist.listadapter.model.PhotoPost
 import com.akexorcist.listadapter.model.Post
 import com.akexorcist.listadapter.model.StatusPost
