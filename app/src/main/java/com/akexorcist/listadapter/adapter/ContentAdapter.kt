@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.akexorcist.listadapter.R
 import com.akexorcist.listadapter.constant.PostType
+import com.akexorcist.listadapter.databinding.ViewPhotoPostBinding
+import com.akexorcist.listadapter.databinding.ViewStatusPostBinding
 import com.akexorcist.listadapter.model.PhotoPost
 import com.akexorcist.listadapter.model.Post
 import com.akexorcist.listadapter.model.StatusPost
@@ -18,18 +20,26 @@ class ContentAdapter : ListAdapter<Post, RecyclerView.ViewHolder>(PostDiffCallba
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        PostType.STATUS -> StatusViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_status_post, parent, false)) as RecyclerView.ViewHolder
-        PostType.PHOTO -> PhotoViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_photo_post, parent, false)) as RecyclerView.ViewHolder
-        else -> throw NullPointerException("View holder for type $viewType not found")
+        PostType.STATUS -> StatusViewHolder(
+            ViewStatusPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        )
+        PostType.PHOTO -> PhotoViewHolder(
+            ViewPhotoPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        )
+        else ->
+            throw NullPointerException("View holder for type $viewType not found")
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (holder is StatusViewHolder) {
-            val statusPost = getItem(position) as StatusPost
-            holder.bind(statusPost)
-        } else if (holder is PhotoViewHolder) {
-            val photoPost = getItem(position) as PhotoPost
-            holder.bind(photoPost)
+        when (holder) {
+            is StatusViewHolder -> {
+                val statusPost = getItem(position) as StatusPost
+                holder.bind(statusPost)
+            }
+            is PhotoViewHolder -> {
+                val photoPost = getItem(position) as PhotoPost
+                holder.bind(photoPost)
+            }
         }
     }
 }
