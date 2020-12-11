@@ -2,6 +2,8 @@ package com.akexorcist.listadapter.model
 
 import com.akexorcist.listadapter.constant.PostType
 
-class StatusPost(id: String, text: String, timestamp: String) : Post(id, text, timestamp, PostType.STATUS) {
-
-}
+data class StatusPost(
+    override val id: String,
+    val text: String,
+    val timestamp: String
+) : Post(id, PostType.STATUS)
